@@ -1,17 +1,12 @@
-#!/bin/bash
-set -e
-
-SKILL_DIR="./skills"
-
-if [ -d "$SKILL_DIR" ]; then
-  echo "✅ 检测到 skill 目录：$SKILL_DIR"
-  for skill_path in "$SKILL_DIR"/*/; do
-    if [ -f "${skill_path}SKILL.md" ]; then
-      echo "🔄 加载 skill: $skill_path"
-      codex skill load "$skill_path"
-    fi
-  done
-  echo "🎉 全部skill加载完成，可以直接调用"
-else
-  echo "⚠️ skills文件夹不存在，跳过自动加载"
-fi
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+cd "$ROOT"
+python3 scripts/install_skills.py --check
+"$ROOT/bin/paper-search" sources >/dev/null
+"$ROOT/bin/humanities-review" --help >/dev/null
+test -f "$ROOT/tools/chrome-devtools/node_modules/chrome-devtools-mcp/build/src/index.js"
+printf '%s\n' 'Research skills and local tools are installed.' \
+  'Codex discovers the 10 project entries through .agents/skills.' \
+  'Restart/open a new Codex session after first installation to refresh its skill catalog.' \
+  'CNKI operations require Chrome DevTools MCP and appropriate CNKI access.'
