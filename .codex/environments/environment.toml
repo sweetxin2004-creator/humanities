@@ -1,0 +1,5 @@
+name = "auto-load-skill-env"
+description = "启动自动加载仓库内skills"
+
+[on_start]
+command = "bash startup.sh"
