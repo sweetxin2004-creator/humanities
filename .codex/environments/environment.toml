@@ -1,5 +1,11 @@
+# Cloud startup is registered separately in environment settings.
+version = 1
 name = "auto-load-skill-env"
-description = "启动自动加载仓库内skills"
 
-[on_start]
+[setup]
+script = "bash install.sh"
+
+[[actions]]
+name = "Check research skills"
+icon = "test"
 command = "bash startup.sh"

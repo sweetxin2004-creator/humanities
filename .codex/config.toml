@@ -1,0 +1,14 @@
+[mcp_servers.paper-search]
+command = "bash"
+args = ["./bin/paper-search-mcp"]
+startup_timeout_sec = 45
+tool_timeout_sec = 90
+
+[mcp_servers.chrome-devtools]
+command = "bash"
+args = ["./bin/chrome-devtools"]
+startup_timeout_sec = 45
+tool_timeout_sec = 90
+
+[mcp_servers.chrome-devtools.env]
+RESEARCH_CHROME_NO_SANDBOX = "1"

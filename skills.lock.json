@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "AcademicForge",
+      "repository": "HughYau/AcademicForge",
+      "commit": "01b6d90c5b50ba0aa48b6564e45ee4a0ade9487c"
+    },
+    {
+      "id": "Auto-Empirical-Research-Skills",
+      "repository": "brycewang-stanford/Auto-Empirical-Research-Skills",
+      "commit": "6b2c9d77a317c7c8d087bd0a227e2e6dc250a9c9"
+    },
+    {
+      "id": "academic-humanizer",
+      "repository": "AIScientists-Dev/academic-humanizer",
+      "commit": "94b88b23703bed7df507acae7d6d5876209a0cdf"
+    },
+    {
+      "id": "academic-writing-skills",
+      "repository": "WenyuChiou/academic-writing-skills",
+      "commit": "d438241cc198c7c943fc7b83b19de3645e788c7f"
+    },
+    {
+      "id": "ai-research-skills",
+      "repository": "WenyuChiou/ai-research-skills",
+      "commit": "22ac7e0c91fcc8208bb86b1167a7fe009d397642"
+    },
+    {
+      "id": "antigravity-delegate",
+      "repository": "WenyuChiou/antigravity-delegate",
+      "commit": "6dbe89dde991d4a5c5298014e284ce78e7091fc8"
+    },
+    {
+      "id": "cnki-skills",
+      "repository": "cookjohn/cnki-skills",
+      "commit": "20d65f660456daf53ad0f7c74494ac3b829b925f"
+    },
+    {
+      "id": "codex-delegate",
+      "repository": "WenyuChiou/codex-delegate",
+      "commit": "73eb7d87fe54b54c34f5d40695774f24cb7a59ff"
+    },
+    {
+      "id": "humanities-thesis-skill",
+      "repository": "ganzhi-black/humanities-thesis-skill",
+      "commit": "9f9c97162e250df8d6c214b828bb973828a2a780"
+    },
+    {
+      "id": "paper-search-mcp",
+      "repository": "openags/paper-search-mcp",
+      "commit": "cab1b5cc276a0cd004a0044003926a6440088049"
+    },
+    {
+      "id": "research-hub",
+      "repository": "WenyuChiou/research-hub",
+      "commit": "2f860f8b56a77c4ce9364e8f7de948040a2ef7f3"
+    },
+    {
+      "id": "research-plugins",
+      "repository": "wentorai/research-plugins",
+      "commit": "bf44b3cd617fa94c8a1b254c5d1987142ca3d631"
+    },
+    {
+      "id": "research-writing-skill",
+      "repository": "Norman-bury/research-writing-skill",
+      "commit": "6f7959554b4614d879d79cb4ece9ed04a7c8a88c"
+    },
+    {
+      "id": "social-science-paper-writing-skill",
+      "repository": "fakerqwq/social-science-paper-writing-skill",
+      "commit": "6f4e06d261e353f57424dee51cdc471c82bc1320"
+    },
+    {
+      "id": "zotero-skills",
+      "repository": "WenyuChiou/zotero-skills",
+      "commit": "f5772f8b62410858d41436efe11e85529b5dee8c"
+    }
+  ],
+  "entries": [
+    {
+      "name": "auto-empirical-research-skills",
+      "source": "Auto-Empirical-Research-Skills",
+      "path": "."
+    },
+    {
+      "name": "research-writing-skill",
+      "source": "research-writing-skill",
+      "path": "."
+    },
+    {
+      "name": "academic-forge",
+      "router": true,
+      "source": "AcademicForge"
+    },
+    {
+      "name": "paper-search",
+      "source": "paper-search-mcp",
+      "path": "claude-code"
+    },
+    {
+      "name": "academic-humanizer",
+      "source": "academic-humanizer",
+      "path": "."
+    },
+    {
+      "name": "cnki-skills",
+      "router": true,
+      "source": "cnki-skills"
+    },
+    {
+      "name": "humanities-thesis-skill",
+      "source": "humanities-thesis-skill",
+      "path": "."
+    },
+    {
+      "name": "research-plugins",
+      "router": true,
+      "source": "research-plugins"
+    },
+    {
+      "name": "social-science-paper-writing-skill",
+      "source": "social-science-paper-writing-skill",
+      "path": "social-science-paper-writing-skill"
+    },
+    {
+      "name": "ai-research-skills",
+      "router": true,
+      "source": "ai-research-skills"
+    }
+  ]
+}

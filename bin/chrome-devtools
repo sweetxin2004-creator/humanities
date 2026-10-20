@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+export XDG_CACHE_HOME="$ROOT/.local/cache"
+export XDG_CONFIG_HOME="$ROOT/.local/config"
+export XDG_STATE_HOME="$ROOT/.local/state"
+CHROME_BIN="${RESEARCH_CHROME_EXECUTABLE:-$(command -v chromium || command -v google-chrome)}"
+ARGS=(--headless --executablePath "$CHROME_BIN"
+  --userDataDir "$ROOT/.local/chrome-profile"
+  --no-usage-statistics --no-performance-crux --no-page-id-routing
+  --workspace "$ROOT")
+# This cloud container provides neither a working SUID helper nor user namespaces.
+# Keep this exception explicit; desktop installations should leave the variable unset.
+if [[ "${RESEARCH_CHROME_NO_SANDBOX:-}" == "1" ]]; then
+  ARGS+=(--chromeArg=--no-sandbox)
+fi
+if [[ -n "${HTTPS_PROXY:-}" ]]; then
+  ARGS+=(--proxyServer "$HTTPS_PROXY")
+fi
+exec "$ROOT/tools/chrome-devtools/node_modules/.bin/chrome-devtools-mcp" "${ARGS[@]}" "$@"
